@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Videos Técnicos - Bytecomtec</title>
+    <style>
+        /* Variables de diseño para fácil personalización */
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-secondary: #666666;
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 15px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contenedor principal de la lista */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Espacio entre cada elemento */
+            max-width: 600px; /* Centrado y control de ancho en pantallas más grandes */
+            margin: 0 auto;
+        }
+
+        /* Fila de cada video */
+        .video-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            display: flex;
+            justify-content: space-between; /* Izquierda y Derecha */
+            align-items: center; /* Centrado vertical */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Lado izquierdo: Título del video */
+        .video-info {
+            flex: 1;
+            padding-right: 15px; /* Evita que el texto pegue con el botón */
+        }
+
+        .video-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-color);
+            word-break: break-word; /* Rompe líneas si el título es muy largo */
+        }
+
+        /* Lado derecho: Botón de acceso al repositorio */
+        .video-action {
+            flex-shrink: 0; /* Evita que el botón se deforme o se encoja */
+        }
+
+        .repo-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* Efecto feedback al presionar en móvil */
+        .repo-btn:active {
+            background-color: var(--primary-hover);
+        }
+
+        /* Ajuste responsivo menor por si se visualiza en pantallas de escritorio */
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .repo-btn:hover {
+                background-color: var(--primary-hover);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Repositorio de Videos Técnicos</h1>
+        <p>Bytecomtec Portal</p>
+    </header>
+
+    <main class="video-list">
+        
+        <!-- Elemento de Video 1 -->
+        <div class="video-item">
+            <div class="video-info">
+                <span class="video-title">Configuración de DVR Hikvision y cableado estructurado</span>
+            </div>
+            <div class="video-action">
+                <a href="https://github.com/tu-usuario/tu-repo-video1" target="_blank" class="repo-btn">Ver Repo</a>
+            </div>
+        </div>
+
+        <!-- Elemento de Video 2 -->
+        <div class="video-item">
+            <div class="video-info">
+                <span class="video-title">Integración de sistemas de seguridad y CRM Dolibarr</span>
+            </div>
+            <div class="video-action">
+                <a href="https://github.com/tu-usuario/tu-repo-video2" target="_blank" class="repo-btn">Ver Repo</a>
+            </div>
+        </div>
+
+        <!-- Elemento de Video 3 -->
+        <div class="video-item">
+            <div class="video-info">
+                <span class="video-title">Topologías de red para proyectos de infraestructura escolar</span>
+            </div>
+            <div class="video-action">
+                <a href="https://github.com/tu-usuario/tu-repo-video3" target="_blank" class="repo-btn">Ver Repo</a>
+            </div>
+        </div>
+
+        <!-- Puedes clonar el bloque de arriba para añadir más videos -->
+
+    </main>
+
+</body>
+</html>
